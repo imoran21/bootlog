@@ -1,3 +1,4 @@
+
 {% extends 'home/base.html' %}
 {% block head_title %}HOME{% endblock %}
 
@@ -36,9 +37,14 @@
             .navbar-static-top {
   margin-bottom:20px;
 }
-
+#id_inv_num{
+  height:150%;
+}
+#id_ammount{
+  height:150%;
+}
 i {
-  font-size:16px;
+  font-size:10px;
 }
 
 .nav > li > a {
@@ -51,6 +57,7 @@ footer {
   padding-bottom:20px;
   background-color:#efefef;
 }
+
 
 /* count indicator near icons */
 .nav>li .count {
@@ -83,7 +90,7 @@ footer {
     <body  >
         
         <!-- Header -->
-<div id="top-nav" class="navbar navbar-inverse navbar-static-top">
+<div id="top-nav" class="navbar navbar-inverse navbar-fixed-top ">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -117,32 +124,18 @@ footer {
       <hr>
       
       <ul class="list-unstyled">
-        <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#userMenu">
-          <h5>Settings <i class="glyphicon glyphicon-chevron-down"></i></h5>
-          </a>
-            <ul class="list-unstyled collapse in" id="userMenu">
-                <li class="active"> <a href="#"><i class="glyphicon glyphicon-home"></i> Home</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> Messages <span class="badge badge-info">4</span></a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Options</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-comment"></i> Shoutbox</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-user"></i> Staff List</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-flag"></i> Transactions</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-exclamation-sign"></i> Rules</a></li>
-                <li><a href="/home/logout_view/"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
-            </ul>
-        </li>
         <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#menu2">
-          <h5>Reports <i class="glyphicon glyphicon-chevron-right"></i></h5>
+          <h5>Payables <i class="glyphicon glyphicon-chevron-right"></i></h5>
           </a>
         
             <ul class="list-unstyled collapse" id="menu2">
-                <li><a href="#">Information &amp; Stats</a>
+                <li><a href="#">Vendors &amp; Stats</a>
                 </li>
-                <li><a href="#">Views</a>
+                <li><a href="#">Bills</a>
                 </li>
-                <li><a href="#">Requests</a>
+                <li><a href="#">Approvers</a>
                 </li>
-                <li><a href="#">Timetable</a>
+                <li><a href="#">Sync Info</a>
                 </li>
                 <li><a href="#">Alerts</a>
                 </li>
@@ -150,19 +143,19 @@ footer {
         </li>
         <li class="nav-header">
         <a href="#" data-toggle="collapse" data-target="#menu3">
-          <h5>Social Media <i class="glyphicon glyphicon-chevron-right"></i></h5>
+          <h5>Setup <i class="glyphicon glyphicon-chevron-right"></i></h5>
           </a>
         
             <ul class="list-unstyled collapse" id="menu3">
-                <li><a href="#"><i class="glyphicon glyphicon-circle"></i> Facebook</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-circle"></i> Twitter</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-circle"></i> Accounts</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-circle"></i> Departments</a></li>
             </ul>
         </li>
       </ul>
            
       <hr>
       
-      <a href="#"><strong><i class="glyphicon glyphicon-link"></i> Resources</strong></a>  
+      <a href="#"><strong><i class="glyphicon glyphicon-link"></i> Documents</strong></a>  
       
       <hr>
       
@@ -177,17 +170,7 @@ footer {
       </ul>
       
       <hr>
-      <ul class="nav nav-stacked">
-        <li class="active"><a href="http://bootply.com" title="The Bootstrap Playground" target="ext">Playground</a></li>
-        <li><a href="/tagged/bootstrap-3">Bootstrap 3</a></li>
-        <li><a href="/61518" title="Bootstrap 3 Panel">Panels</a></li>
-        <li><a href="/61521" title="Bootstrap 3 Icons">Glyphicons</a></li>
-        <li><a href="/61523" title="Bootstrap 3 ListGroup">List Groups</a></li>
-        <li><a href="#">GitHub</a></li>
-        <li><a href="/61518" title="Bootstrap 3 Slider">Carousel</a></li>
-        <li><a href="/62603">Layout</a></li>
-      </ul>
-
+    
       <hr>
   	</div><!-- /col-3 -->
     <div class="col-md-9">
@@ -197,7 +180,6 @@ footer {
          <li><a href="#"><i class="glyphicon glyphicon-cog"></i></a></li>
          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-comment"></i><span class="count">3</span></a><ul class="dropdown-menu" role="menu"><li><a href="#">1. Is there a way..</a></li><li><a href="#">2. Hello, admin. I would..</a></li><li><a href="#"><strong>All messages</strong></a></li></ul></li>
          <li><a href="#"><i class="glyphicon glyphicon-user"></i></a></li>
-         <li><a title="Add Widget" data-toggle="modal" href="#addWidgetModal"><span class="glyphicon glyphicon-plus-sign"></span> Add Widget</a></li>
       </ul>
       <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>  
       
@@ -214,21 +196,24 @@ footer {
               <hr>
               
               <div class="btn-group btn-group-justified">
-                <a href="#" class="btn btn-primary col-sm-3">
+                <a href="/home/create_bill/" class="btn btn-primary col-sm-3">
                   <i class="glyphicon glyphicon-plus"></i><br>
-                  Service
+                  Add Bill
                 </a>
                 <a href="#" class="btn btn-primary col-sm-3">
-                  <i class="glyphicon glyphicon-cloud"></i><br>
-                  Cloud
+                   <i class="glyphicon glyphicon-plus"></i>
+              <br>
+                  Add Vendor
                 </a>
                 <a href="#" class="btn btn-primary col-sm-3">
-                  <i class="glyphicon glyphicon-cog"></i><br>
-                  Tools
+                   <i class="glyphicon glyphicon-plus"></i>
+                <br>
+                  Add Approver
                 </a>
                 <a href="#" class="btn btn-primary col-sm-3">
-                  <i class="glyphicon glyphicon-question-sign"></i><br>
-                  Help
+                   <i class="glyphicon glyphicon-plus"></i>
+                 <br>
+                  Configure 
                 </a>
               </div>
               
@@ -238,25 +223,25 @@ footer {
                   <div class="panel-heading"><h4>Reports</h4></div>
                   <div class="panel-body">
                     
-                    <small>Success</small>
+                    <small>Bills Allocated</small>
                     <div class="progress">
                       <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%">
                         <span class="sr-only">32% Complete</span>
                       </div>
                     </div>
-                    <small>Info</small>
+                    <small>Bills Approving</small>
                     <div class="progress">
                       <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
                         <span class="sr-only">20% Complete</span>
                       </div>
                     </div>
-                    <small>Warning</small>
+                    <small>Bills Approved</small>
                     <div class="progress">
                       <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
                         <span class="sr-only">60% Complete (warning)</span>
                       </div>
                     </div>
-                    <small>Danger</small>
+                    <small>Bills Denied</small>
                     <div class="progress">
                       <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
                         <span class="sr-only">80% Complete</span>
@@ -269,52 +254,69 @@ footer {
 			  <hr>              
 
 			  <!--tabs-->
-              <div class="container">
-                <div class="col-md-4">
-                <ul class="nav nav-tabs" id="myTab">
-                  <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
-                  <li><a href="#messages" data-toggle="tab">Messages</a></li>
-                  <li><a href="#settings" data-toggle="tab">Settings</a></li>
-                </ul>
-                
-                <div class="tab-content">
-                  <div class="tab-pane active" id="profile">
-                    <h4><i class="glyphicon glyphicon-user"></i></h4>
-                    Lorem profile dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-                    <p>Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
-                      dolor, in sagittis nisi.</p>
-                  </div>
-                  <div class="tab-pane" id="messages">
-                    <h4><i class="glyphicon glyphicon-comment"></i></h4>
-                    Message ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-                    <p>Quisque mauris augu.</p>
-                  </div>
-                  <div class="tab-pane" id="settings">
-                    <h4><i class="glyphicon glyphicon-cog"></i></h4>
-                    Lorem settings dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
-                    <p>Quisque mauris augue, molestie.</p>
-                  </div>
-                </div>
-              	</div>
-              </div>  
                
               <!--/tabs-->
               
               <hr>
               
               <div class="panel panel-default">
-                  <div class="panel-heading"><h4>New Requests</h4></div>
+                  <div class="panel-heading"><h4>Most Recent Bills</h4></div>
                   <div class="panel-body">
                     <div class="list-group">
-                    <a href="#" class="list-group-item active">Hosting virtual mailbox serv..</a>
-                    <a href="#" class="list-group-item">Dedicated server doesn't..</a>
-                    <a href="#" class="list-group-item">RHEL 6 install on new..</a>
+                    <a href="#" class="list-group-item active">Apple 1234 $12,000</a>
+                    <a href="#" class="list-group-item">Best Buy 2342 $100,000</a>
+                    <a href="#" class="list-group-item">Starbucks 4262 $200,000</a>
                     </div>
                   </div>
               </div>
    
           	</div><!--/col-->
+
+
+
         	<div class="col-md-6">
+            <div class="panel panel-default">
+                  <div class="panel-heading">
+                        <div class="panel-title">
+                      <i class="glyphicon glyphicon-wrench pull-right"></i>
+                        <h4>Add Bill</h4>
+                        </div>
+                  </div>
+                  <div class="panel-body">
+
+                      <form class="form form-vertical" method ="post">{% csrf_token %}
+                     <fieldset>
+        <legend>{{ title }}</legend>
+        {% for field in form %}
+            {% if field.errors %}
+                <div class="control-group error">
+                    <label class="control-label">{{ field.label }}</label> 
+                    <div class="controls"><p>{{ field }}</p>
+                        <span class="help-inline">
+                            {% for error in  field.errors %}{{ error }}{% endfor %}
+                        </span>
+                    </div>
+                </div>
+            {% else %}
+                <div class="control-group">
+                    <label class="control-label">{{ field.label }}</label> 
+                    <div class="controls"><p>{{ field }}</p>
+                        {% if field.help_text %}
+                            <p class="help-inline"><small>{{ field.help_text }}</small></p>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </fieldset>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary" >Submit</button>
+         <a href="#"><button class="btn btn-secondary" >Register</button></a>
+    </div>
+</form>
+                
+                
+                  </div><!--/panel content-->
 				<div class="panel panel-default">
                   <div class="panel-heading"><h4>Notices</h4></div>
                   <div class="panel-body">
@@ -331,64 +333,7 @@ footer {
                   </div>
               	</div>
               
-                <table class="table table-striped">
-                      <thead>
-                        <tr><th>Visits</th><th>ROI</th><th>Source</th></tr>
-                      </thead>
-                      <tbody>
-                        <tr><td>45</td><td>2.45%</td><td>Direct</td></tr>
-                        <tr><td>289</td><td>56.2%</td><td>Referral</td></tr>
-                        <tr><td>98</td><td>25%</td><td>Type</td></tr>
-                        <tr><td>..</td><td>..</td><td>..</td></tr>
-                        <tr><td>..</td><td>..</td><td>..</td></tr>
-                      </tbody>
-               	</table>
-              
-              	<div class="panel panel-default">
-                	<div class="panel-heading">
-                      	<div class="panel-title">
-                  		<i class="glyphicon glyphicon-wrench pull-right"></i>
-                      	<h4>Post Request</h4>
-                      	</div>
-                	</div>
-                	<div class="panel-body">
-
-                      <form class="form form-vertical">
-                       
-                        <div class="control-group">
-                          <label>Name</label>
-                          <div class="controls">
-                           <input type="text" class="form-control" placeholder="Enter Name">
-                          </div>
-                        </div>      
-                        
-                        <div class="control-group">
-                          <label>Message</label>
-                          <div class="controls">
-                          	<textarea class="form-control"></textarea>
-                          </div>
-                        </div> 
-                             
-                        <div class="control-group">
-                          <label>Category</label>
-                          <div class="controls">
-                             <select class="form-control"><option>options</option></select>
-                          </div>
-                        </div>    
-                        
-                        <div class="control-group">
-                          	<label></label>
-                        	<div class="controls">
-                        	<button type="submit" class="btn btn-primary">
-                              Post
-                            </button>
-                        	</div>
-                        </div>   
-                        
-                      </form>
-                
-                
-                  </div><!--/panel content-->
+              	
                 </div><!--/panel-->
               
               	<div class="panel panel-default">
@@ -406,7 +351,7 @@ footer {
       
       <hr>
       
-      <a href="#"><strong><i class="glyphicon glyphicon-comment"></i> Discussions</strong></a>  
+      <a href="#"><strong><i class="glyphicon glyphicon-comment"></i> Issues</strong></a>  
       
       <hr>
       

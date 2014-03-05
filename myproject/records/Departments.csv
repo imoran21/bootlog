@@ -1,0 +1,35 @@
+Internal ID,Name,Budget Owner
+1,000-Corporate,
+4,120-Supply Chain,Jim Quinn
+5,130-Logistics,Andrea Abegg
+6,140-Manufacturing Eng & Quality,Rick Rasor
+8,210-Mechanical Engineering,Mark Martinez
+9,220-Electrical Engineering,Hans Hartman
+11,310-Android Development,Sam Trychin
+12,320-Other Platforms,Peter Moletierre
+13,330-Firmware,Heiko Panther
+14,340-iPhone Development,Barry Burton
+15,350-Research,Shelten Yuen
+16,360-Site Engineering,Michael Jones
+18,410-Interactive Design,Tim Roberts
+19,420-Product Management,Tim Roberts
+21,510-Business Development,Amy McDonough
+22,520-Marketing,Tim Rosa
+23,530-Sales,Mark Silverio
+25,610-Customer support,Jay Kerschner
+27,710-Executive Team,James Park
+28,720-Finance & Accounting,Meena Srinivasan
+29,730-Human Resources,Meena Srinivasan
+30,740-Legal,Andy Missan
+32,810-IT,Eric Friedman
+33,820-Facilities,Meena Srinivasan
+102,370-Site Operations,Michael Jones
+103,430-Product Analytics,Tim Roberts
+104,521-Public Relations,Tim Rosa
+105,522-Product Marketing,Tim Rosa
+106,523-Brand Marketing,Tim Rosa
+107,524-Lifestyle Marketing,Tim Rosa
+108,525-Acquisition Marketing,Tim Rosa
+109,526-Premium Marketing,Tim Rosa
+110,527-Operations Marketing,Tim Rosa
+111,715- CEO,James Park

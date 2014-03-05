@@ -1,0 +1,42 @@
+Internal ID,Name,Phone,City,State/Province,Country
+1,110-Headquarters,,San Francisco,CA,US
+102,140-Ban Leong,,,,US
+101,150-In Transit Domestic,,,,US
+107,160-In Transit Canada,,,,US
+106,170-In Transit International,,,,US
+3,211-3PL US Main WH,,Plainfield,IN,US
+4,212-3PL US MRB,,Plainfield,IN,US
+5,213-3PL US RMA,,Plainfield,IN,US
+6,214-3PL US RMA MRB,,Plainfield,IN,US
+8,221-3PL EU Main WH,,Lozorno,,SK
+9,222-3PL EU MRB,,Lozorno,,SK
+10,223-3PL EU RMA,,Lozorno,,SK
+11,224-3PL EU RMA MRB,,Lozorno,,SK
+13,231-3PL CA Main WH,,Mississauga,ON,CA
+14,232-3PL CA MRB,,Mississauga,ON,CA
+15,233-3PL CA RMA,,Mississauga,ON,CA
+16,234-3PL CA RMA MRB,,Mississauga,ON,CA
+18,241-3PL AS Main WH,,,,CN
+19,242-3PL AS MRB,,,,CN
+20,243-3PL AS RMA,,,,CN
+21,244-3PL AS RMA MRB,,,,CN
+23,411-Bonso Main WH,,Hong Kong,,HK
+24,412-Bonso MRB,,Hong Kong,,HK
+26,421-Flex Main WH,,"Doumen, Zhuhai",,CN
+27,422-Flex MRB,,"Doumen, Zhuhai",,CN
+29,431-PCP Main WH,,Fo Tan,Shatin,HK
+30,432-PCP MRB,,Fo Tan,Shatin,HK
+42,610-US,,,,US
+31,620-Boston,,Boston,MA,US
+33,650-Canada,,,,CA
+41,710-UK,,,,GB
+40,720-Spain,,,,US
+34,730-France,,,,FR
+35,740-Germany,,,,DE
+39,790-Other EMEA,,,,US
+36,810-Japan,,,,JP
+108,820-Hong Kong,,,,HK
+109,830-Korea,,,,KR
+32,870-Australia,,,,AU
+37,880-New Zealand,,,,NZ
+38,890-Other APAC,,,,CN
