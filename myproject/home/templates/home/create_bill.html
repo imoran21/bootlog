@@ -5,6 +5,7 @@
 
 {% block content %}
     <h2>Create a bill</h2>
+
     <form class="form-horizontal" method="post">{% csrf_token %}
     <fieldset>
         <legend>{{ title }}</legend>
@@ -28,13 +29,15 @@
                     </div>
                 </div>
             {% endif %}
-        {% endfor %}
+
     </fieldset>
+    {% endfor %}
     <div class="form-actions">
-        <button type="submit" class="btn btn-primary" >Submit</button>
-         <a href="#"><button class="btn btn-secondary" >Register</button></a>
+        <button type="submit" formaction = '/home/create_bill_line/' class="btn btn-primary" >Submit</button>
+         
     </div>
 </form>
+
     
 
 {% endblock %}
